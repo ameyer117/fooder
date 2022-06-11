@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:fooder/api/mock_fooderlich_service.dart';
-import 'package:fooder/components/today_recipe_list_view.dart';
+import 'package:fooder/components/components.dart';
 import 'package:fooder/models/explore_data.dart';
 
 class ExploreScreen extends StatelessWidget {
@@ -19,9 +19,9 @@ class ExploreScreen extends StatelessWidget {
             children: [
               TodayRecipeListView(recipes: snapshot.data?.todayRecipes ?? []),
               const SizedBox(height: 16),
-              // FriendPostListView(
-              //   friendPosts: snapshot.data?.friendPosts ?? [],
-              // )
+              FriendPostListView(
+                friendPosts: snapshot.data?.friendPosts ?? [],
+              )
             ],
           );
         } else {
